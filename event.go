@@ -24,6 +24,10 @@ func (e *ENetEvent) Packet() *ENetPacket {
 	return (*ENetPacket)(e.packet)
 }
 
+func (e *ENetEvent) Data() uint {
+	return uint(e.data)
+}
+
 func (e *ENetEvent) ChannelID() int {
 	return int(e.channelID)
 }
